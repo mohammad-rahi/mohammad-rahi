@@ -14,8 +14,8 @@
   background: #2e2e2e;
 }
 ::selection{
-  background: #2e2e2e;
   color: #f8f9fa;
+  background: #2e2e2e;
 }
 html {
   scroll-behavior: smooth;
