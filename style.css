@@ -64,7 +64,7 @@ nav ul li a {
   color: #555555;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   transition: transform 0.3s;
 }
 
@@ -85,8 +85,8 @@ nav ul li a:hover::after {
 .logo {
   color: #2e2e2e;
   font-size: 22px;
-  letter-spacing: 3px;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 .text-wrapper {
   position: absolute;
