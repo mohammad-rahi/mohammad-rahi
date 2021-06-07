@@ -46,7 +46,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background: #ffffff;
+  background: rgba(255,255,255,.2);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
   padding: 0 5%;
   position: fixed;
