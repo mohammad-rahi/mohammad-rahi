@@ -974,3 +974,10 @@ footer {
     text-align: center;
   }
 }
+@media (orientation: landscape)
+{
+  html
+  {
+    background-size: cover;
+  }
+}
