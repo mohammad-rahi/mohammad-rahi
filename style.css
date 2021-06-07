@@ -26,7 +26,6 @@ html
   background-position: 0 35%, 0 10%, 0 7%, 0 0;
   background-repeat: repeat-x;
   background-size: 100% 50%, 100% 50%, 100%, 100%;
-  opacity: .8;
   
   animation: 50s para infinite linear;
 }
