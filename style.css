@@ -18,20 +18,23 @@
   color: #f8f9fa;
   background: #2e2e2e;
 }
-html {
+html
+{
   scroll-behavior: smooth;
   height: 100%;
-  background-image: url("bg1.png"), url("bg2.png"), url("bg3.png"),
-    url("bg4.png"), url("bg5.png");
+  background-image:  url('/img/bg1.png'), url('/img/bg2.png'), url('/img/bg4.png'), url('/img/bg5.png');
+  background-position: 0 35%, 0 10%, 0 7%, 0 0;
   background-repeat: repeat-x;
-  background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
-  background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
+  background-size: 100% 50%, 100% 50%, 100%, 100%;
+  opacity: .8;
+  
   animation: 50s para infinite linear;
 }
-@keyframes para {
-  100% {
-    background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%,
-      400px 0;
+@keyframes para
+{
+  100%
+  {
+     background-position: -4000px 35%, -800px 10%, -400px 8%, 1000px 0;
   }
 }
 a {
