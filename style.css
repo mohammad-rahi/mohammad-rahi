@@ -346,6 +346,21 @@ nav button
   opacity: 1;
   right: 0;
 }
+.top-trigger
+{
+  cursor: pointer;
+  padding: 15px;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  display: inline-block;
+  z-index: 5;
+  background: rgba(255,255,255,.5);
+}
+.top-trigger a i
+{
+  color: #2e2e2e;
+}
 
 /* Skills section */
 #skills {
