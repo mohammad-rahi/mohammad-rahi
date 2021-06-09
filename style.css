@@ -6,15 +6,12 @@
 }
 :root {
   --color: #f8f9fa;
-  --secondary-black: #f8f9fa;
-  --secondary-gray: #aaa;
-  --body-bg: #2e2e2e;
 }
-::-moz-selection{
+::-moz-selection {
   color: #f8f9fa;
   background: #2e2e2e;
 }
-::selection{
+::selection {
   color: #f8f9fa;
   background: #2e2e2e;
 }
@@ -22,24 +19,48 @@ html
 {
   scroll-behavior: smooth;
   height: 100%;
-  background-image:  url("bg1.png"), url("bg2.png"), url("bg4.png"), url("bg5.png");
+  background-image: url("bg1.png"), url("bg2.png"), url("bg4.png"), url("bg5.png");
   background-position: 0 35%, 0 10%, 0 7%, 0 0;
   background-repeat: repeat-x;
   background-size: 100% 50%, 100% 50%, 100%, 100%;
-  
+
   animation: 50s para infinite linear;
 }
 @keyframes para
 {
   100%
   {
-     background-position: -4000px 35%, -800px 10%, -400px 8%, 1000px 0;
+    background-position: -4000px 35%, -800px 10%, -400px 8%, 1000px 0;
   }
 }
 a {
   text-decoration: none;
 }
-header {
+
+/* Header section */
+header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,.9);
+  padding: 15px;
+}
+header p, header a
+{
+  color: #f1f1f1;
+  letter-spacing: 1px;
+  font-weight: 450;
+  font-size: 16px;
+}
+header a
+{
+  padding: 15px;
+  margin: 0;
+}
+
+/* Home section */
+.home {
   height: 100vh;
   position: relative;
 }
@@ -51,7 +72,7 @@ nav {
   background: rgba(255,255,255,.9);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
   padding: 0 5%;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 10;
@@ -62,33 +83,58 @@ nav ul {
 }
 nav ul li a {
   display: inline-block;
-  margin: 20px;
+  margin: 0 5px;
+  padding: 10px;
   color: #555555;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 1px;
-  transition: transform 0.3s;
+  position: relative;
+  transition: all 0.4s;
 }
-
-nav ul li a:hover {
-  transform: translateX(-10px);
-}
-nav ul li a::after {
+nav ul li a::before
+{
   content: "";
-  display: block;
   width: 0;
   height: 2px;
-  background: #1fe6ff;
-  transition: width 0.3s;
+  background-color: #1fe6ff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: .4s;
 }
-nav ul li a:hover::after {
-  width: 100%;
+nav ul li a::after
+{
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #1fe6ff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+nav ul li a:hover::before, nav ul li a:hover::after
+{
+  width: 50%;
 }
 .logo {
   color: #2e2e2e;
   font-size: 22px;
   letter-spacing: 1px;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+nav button
+{
+  color: #fff;
+  background-color: rgba(0,0,0,.8);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 10px;
 }
 .text-wrapper {
   position: absolute;
@@ -179,7 +225,10 @@ nav ul li a:hover::after {
 .hire-btn:hover > .hire-span {
   color: #f8f9fa;
 }
+
+/* About section */
 .about {
+  margin: 0;
   height: 90vh;
 }
 .about-wrapper {
@@ -191,16 +240,48 @@ nav ul li a:hover::after {
   margin: 0% auto 20px auto;
   position: relative;
 }
-.about-wrapper img {
-  height: 250px;
-  transform: scale(1);
-  opacity: 0.9;
-  transition: 0.3s;
+.img-wrapper
+{
+  overflow: hidden;
+  position: relative
 }
-.about-wrapper img:hover {
+.img-wrapper img {
+  height: 230px;
+  transition: 0.4s;
+}
+.overlay
+{
+  background: rgba(65,70,108,.4);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+}
+.overlay button
+{
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,.6);
+  color: rgba(0,0,0,.6);
+  padding: 15px;
+  font-weight: 450;
+  font-size: 18px;
+  letter-spacing: 3px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,1);
+}
+.img-wrapper:hover > img
+{
   transform: scale(1.3);
-  opacity: 1;
-  border-radius: 50%;
+}
+.img-wrapper:hover > .overlay
+{
+  visibility: hidden;
 }
 .about-text {
   width: 500px;
@@ -238,7 +319,7 @@ nav ul li a:hover::after {
   border-radius: 4px;
   display: inline-block;
   text-align: center;
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+  background: linear-gradient(to bottom,#59476f 30%, #7b88d1 100%);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -265,6 +346,8 @@ nav ul li a:hover::after {
   opacity: 1;
   right: 0;
 }
+
+/* Skills section */
 #skills {
   display: flex;
   justify-content: center;
@@ -363,7 +446,7 @@ nav ul li a:hover::after {
   height: 100%;
   box-shadow: inset 0 0 2px #111;
   border-radius: 10px;
-  animation: animate 4s ease-in-out forwards;
+  animation: animate4sease-in-out forwards;
 }
 .skills-wrapper .skills:nth-child(2) .percent .progress {
   background: linear-gradient(45deg, #1fe6ff, #673ab7);
@@ -405,7 +488,7 @@ nav ul li a:hover::after {
 #projects .item .right {
   margin-left: -150px;
   flex: 1;
-  background-color: var(--body-bg);
+  background-color: #2e2e2e;
   padding: 5rem 3rem;
   border-radius: 12px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
@@ -455,7 +538,7 @@ nav ul li a:hover::after {
   color: #ccc;
 }
 #projects .item .right .project-desc {
-  color: var(--secondary-gray);
+  color: #aaa;
   margin-bottom: 3rem;
 }
 #projects .item .right .primary-btn {
@@ -472,6 +555,7 @@ nav ul li a:hover::after {
   width: 25px;
 }
 
+/* Services section */
 .services {
   min-height: 90vh;
   padding: 0 10%;
@@ -594,6 +678,8 @@ nav ul li a:hover::after {
   width: 100%;
   z-index: -1;
 }
+
+/* Contact section CSS */
 .contact-section {
   background: #2e2e2e;
   width: 100%;
@@ -690,6 +776,8 @@ textarea label {
   color: #2e2e2e;
   border: none;
 }
+
+/* Footer section CSS */
 footer p {
   font-family: calibri;
 }
@@ -776,6 +864,8 @@ footer {
   font-size: 20px;
   color: #2b2b2b;
 }
+
+/* Responsive CSS for Larger Desktop */
 @media (max-width: 1920px) {
   .about-text p:nth-child(1) {
     color: #403e3e;
@@ -800,6 +890,7 @@ footer {
   }
 }
 
+/* Responsive CSS for Desktop */
 @media (max-width: 1440px) {
   html {
     background-size: cover;
@@ -814,7 +905,7 @@ footer {
     width: 90%;
     border-radius: 10px;
   }
-  .about-wrapper img {
+  .img-wrapper img {
     height: 200px;
   }
   .about-text {
@@ -860,6 +951,7 @@ footer {
   }
 }
 
+/* Responsive CSS for mobile / Tablet */
 @media (max-width: 750px) {
   html {
     background-size: cover;
@@ -890,12 +982,6 @@ footer {
     height: auto;
     padding: 30px 0px;
     align-items: center;
-  }
-  .about-wrapper img {
-    transform: scale(0.9);
-  }
-  .about-wrapper img:hover {
-    transform: scale(1);
   }
   .about-text {
     width: 90%;
@@ -974,8 +1060,7 @@ footer {
     text-align: center;
   }
 }
-@media (orientation: landscape)
-{
+@media (orientation: landscape) {
   html
   {
     background-size: cover;
