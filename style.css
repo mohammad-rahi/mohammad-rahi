@@ -1080,4 +1080,7 @@ footer {
   {
     background-size: cover;
   }
+  .text-wrapper p {
+    margin: 40px 0px 20px 0;
+  }
 }
