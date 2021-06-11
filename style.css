@@ -1096,29 +1096,8 @@ footer {
 }
 
 /* Responsive CSS for mobile / Tablet */
-@media (max-width: 750px) {
-  html {
-    background-size: cover;
-  }
-  nav ul {
-    width: 65%;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  nav ul li a {
-    display: inline-block;
-  }
-  .text-wrapper p:nth-child(2) {
-    line-height: 40px;
-    margin: 0px;
-    padding: 0px;
-  }
-  .text-wrapper {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-  }
+@media (max-width: 768px)
+{
   .about-wrapper {
     top: 0px;
     flex-direction: column;
@@ -1143,6 +1122,31 @@ footer {
   .about-text p:nth-child(3),
   .about-text p:nth-child(4) {
     color: #7e7d7d;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    background-size: cover;
+  }
+  nav ul {
+    width: 65%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  nav ul li a {
+    display: inline-block;
+  }
+  .text-wrapper p:nth-child(2) {
+    line-height: 40px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .text-wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
   }
   .text {
     width: 100%;
