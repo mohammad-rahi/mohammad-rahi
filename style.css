@@ -1217,6 +1217,13 @@ footer {
     text-align: center;
   }
 }
+@media (max-width: 368px) and (max-height: 668px)
+{
+  .about
+  {
+    min-height: 150vh;
+  }
+}
 @media (orientation: landscape) {
   html
   {
