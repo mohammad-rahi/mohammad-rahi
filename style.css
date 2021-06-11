@@ -1221,7 +1221,7 @@ footer {
 {
   .about
   {
-    min-height: 200vh;
+    min-height: 170vh;
   }
 }
 @media (orientation: landscape) {
