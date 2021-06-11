@@ -1120,7 +1120,6 @@ footer {
     flex-direction: column;
     width: 90%;
     height: auto;
-    padding: 30px 0px;
     align-items: center;
   }
   .about-text {
@@ -1144,10 +1143,10 @@ footer {
   .text {
     width: 100%;
   }
-.bars-wrapper
-{
+ .bars-wrapper
+ {
   width: 100%;
-}
+ }
   .project-text p:nth-child(2) {
     margin: 0px 0px 20px 0px;
   }
@@ -1217,6 +1216,10 @@ footer {
   }
   .text-wrapper p {
     margin: 40px 0px 20px 0;
+  }
+  .about-wrapper
+  {
+    width: 100%;
   }
   .project-text p:nth-child(2) {
     margin: 0px 0px 20px 0px;
