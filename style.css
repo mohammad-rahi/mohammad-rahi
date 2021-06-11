@@ -1010,6 +1010,10 @@ footer {
 
 /* Responsive CSS for Larger Desktop */
 @media (max-width: 1920px) {
+  .about-wrapper
+  {
+    padding-top: 15px;
+  }
   .about-text p:nth-child(1) {
     color: #403e3e;
   }
