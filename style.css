@@ -1178,6 +1178,7 @@ footer {
   position: relative;
 }
 .copyright {
+  text-align: center;
   color: #565555;
   font-size: 12px;
   position: absolute;
