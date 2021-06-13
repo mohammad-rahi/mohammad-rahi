@@ -47,7 +47,7 @@ header
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0,0,0,.9);
+  background-color: rgba(59,89,152,.8);
   padding: 15px;
 }
 header p, .icon-box a
