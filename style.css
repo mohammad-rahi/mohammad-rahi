@@ -183,7 +183,6 @@ nav ul {
 }
 nav ul li a {
   display: inline-block;
-  margin: 0 5px;
   padding: 10px;
   color: #555555;
   font-size: 15px;
@@ -197,7 +196,7 @@ nav ul li a::before
   content: "";
   width: 0;
   height: 2px;
-  background-color: #1fe6ff;
+  background-color: #3b5998;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -208,7 +207,7 @@ nav ul li a::after
   content: "";
   width: 0;
   height: 2px;
-  background-color: #1fe6ff;
+  background-color: #3b5998;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -220,9 +219,35 @@ nav ul li a:hover::before, nav ul li a:hover::after
 }
 .logo {
   color: #2e2e2e;
-  font-size: 22px;
+  font-size: 26px;
+  font-weight: 600;
   letter-spacing: 1px;
-  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px rgba(0,0,0,.4);
+}
+.icon-bar {
+  display: inline-block;
+  cursor: pointer;
+  transition: margin-top .4s;
+  visibility: hidden;
+}
+.bar {
+  width: 32px;
+  height: 5px;
+  margin: 6px 0;
+  background-color: black;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  transform: rotate(-360deg);
+  transition: all .4s;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 9px);
+}
+.change .bar2 {
+  transform: rotate(360deg) scale(0);
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 nav button
 {
@@ -1308,13 +1333,44 @@ footer {
   html {
     background-size: cover;
   }
+  nav
+  {
+    position: relative;
+  }
   nav ul {
-    width: 65%;
-    overflow-x: auto;
-    white-space: nowrap;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: -500px;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(255,255,255,.9);
+    transition: left .4s;
+  }
+  .toggle
+  {
+    left: 0;
   }
   nav ul li a {
-    display: inline-block;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+  }
+  nav ul li a::before
+  {
+    left: 25%;
+  }
+  nav ul li a::after
+  {
+    right: 25%;
+  }
+  .icon-bar
+  {
+    visibility: visible;
+  }
+  nav button
+  {
+    display: none;
   }
   .text-wrapper p:nth-child(2) {
     line-height: 40px;
