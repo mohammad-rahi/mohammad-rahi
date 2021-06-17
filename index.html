@@ -53,7 +53,7 @@
       <a class="logo" href="#top">Portfolio</a>
 
       <!-- Menu -->
-      <ul>
+      <ul id="menu">
         <li><a href="#top">Home</a></li>
         <li><a href="#about-div">About</a></li>
         <li><a href="#skills-div">Skills</a></li>
@@ -61,6 +61,13 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Icon bar -->
+      <div onclick="toggle(this)" class="icon-bar">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
 
       <!-- search button -->
       <button>
@@ -452,5 +459,29 @@
 
   </footer>
 
+
+  <script type="text/javascript" charset="utf-8">
+    window.onscroll = function() {
+
+      var nav = document.querySelector("nav");
+
+      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        nav.style.position = "fixed";
+        nav.style.top = "0";
+      } else
+      {
+        nav.style.position = "relative";
+      }
+    }
+
+    function toggle(x) {
+      var menu = document.getElementById("menu");
+
+      x.classList.toggle('change');
+
+      menu.classList.toggle('toggle');
+
+    }
+  </script>
 </body>
 </html>
