@@ -1303,27 +1303,6 @@ footer {
   {
     width: 100%;
   }
-  .project-text p:nth-child(2) {
-    margin: 0px 0px 20px 0px;
-  }
-  #projects .item {
-    flex-direction: column;
-  }
-  #projects .item .left {
-    width: 100%;
-  }
-  #projects .item .right {
-    margin-left: 0;
-    width: 90%;
-    margin-top: -150px;
-  }
-  #projects .item:nth-of-type(even) {
-    flex-direction: column;
-  }
-  #projects .item:nth-of-type(even) .left {
-    margin-left: 0;
-  }
-  #projects .project-text,
   .skills-text,
   .text {
     padding: 10px 10px 3.1rem 10px;
@@ -1356,15 +1335,6 @@ footer {
     width: 90%;
   }
 }
-@media (max-width: 450px) {
-  #projects .item .right .buttons {
-    flex-direction: column;
-  }
-  #projects .item .right .buttons a {
-    width: 100%;
-    text-align: center;
-  }
-}
 @media (max-width: 368px) and (max-height: 668px) {
   .about
   {
@@ -1382,8 +1352,5 @@ footer {
   .about-wrapper
   {
     width: 100%;
-  }
-  .project-text p:nth-child(2) {
-    margin: 0px 0px 20px 0px;
   }
 }
