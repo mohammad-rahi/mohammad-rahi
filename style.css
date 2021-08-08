@@ -277,7 +277,7 @@ nav button
   color: #ffe1a8;
   font-size: 22px;
 }
-.text-wrapper p:nth-child(2) {
+.text-wrapper h1{
   font-family: calibri;
   font-weight: bold;
   letter-spacing: 1px;
