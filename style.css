@@ -25,7 +25,7 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
-  background-image: url("bg1.png"), url("bg2.png"), url("bg4.png"), url("bg5.png");
+  background-image: url("images/bg1.png"), url("images/bg2.png"), url("images/bg4.png"), url("images/bg5.png");
   background-position: 0 35%, 0 10%, 0 7%, 0 0;
   background-repeat: repeat-x;
   background-size: 100% 50%, 100% 50%, 100%, 100%;
@@ -49,7 +49,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(59, 89, 152, .8);
+  background-color: teal;
   padding: 15px;
 }
 
@@ -105,7 +105,7 @@ header p,
   left: -38px;
   top: 40px;
   transform: scale(0);
-  transition: transform .5s;
+  transition: transform .3s;
   z-index: 11;
 }
 
@@ -197,7 +197,7 @@ nav ul {
 nav ul li a {
   display: inline-block;
   padding: 10px;
-  color: #555555;
+  color: #52A3A9;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -209,7 +209,7 @@ nav ul li a::before {
   content: "";
   width: 0;
   height: 2px;
-  background-color: #3b5998;
+  background-color: #52A3A9;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -220,7 +220,7 @@ nav ul li a::after {
   content: "";
   width: 0;
   height: 2px;
-  background-color: #3b5998;
+  background-color: #52A3A9;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -233,12 +233,12 @@ nav ul li a:hover::after {
 }
 
 .logo {
-  color: #2e2e2e;
+  color: #52A3A9;
   font-size: 26px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, .4);
+  text-shadow: 2px 2px 3px ;
 }
 
 .icon-bar {
@@ -252,7 +252,7 @@ nav ul li a:hover::after {
   width: 32px;
   height: 5px;
   margin: 6px 0;
-  background-color: black;
+  background-color: #52A3A9;
   box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
   transform: rotate(-360deg);
   transition: all .4s;
@@ -297,7 +297,7 @@ nav button {
 .text-wrapper p:nth-child(1) {
   font-family: calibri;
   font-weight: bold;
-  color: #ffe1a8;
+  color: #52A3A9;
   font-size: 22px;
 }
 
@@ -305,82 +305,40 @@ nav button {
   font-family: calibri;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #1fe6ff;
+  color: teal;
   font-size: 60px;
 }
 
 .text-wrapper p:nth-child(3) {
   font-family: myriad pro regular;
-  color: #f8f9fa;
+  color: #52A3A9;
   font-size: 30px;
   line-height: 30px;
 }
 
 .hire-btn {
   width: 100%;
-  height: 42px;
-  border-radius: 10px;
+  padding: 15px 25px;
+  border-radius: 40px;
   font-family: calibri;
   font-weight: bold;
   font-size: 14px;
   outline: none;
   margin: 0px 10px;
   box-shadow: 8px 4px 16px rgba(0, 0, 0, 0.2);
-  border: 2px solid #1fe6ff;
-  color: #1fe6ff;
+  border: 2px solid #52A3A9;
+  color: #52A3A9;
   background-color: transparent;
-  position: relative;
-}
-
-.hire-btn::before {
-  content: "";
-  width: 0;
-  height: 0;
-  background: linear-gradient(45deg, #ffee54, #ff00ca);
-  border-radius: 5px 0px 0px 5px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 0.3s;
-  z-index: -1;
-  opacity: 0;
-}
-
-.hire-btn:hover::before {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-
-.hire-btn::after {
-  content: "";
-  width: 0;
-  height: 0;
-  background: linear-gradient(45deg, #1fe6ff, #673ab7);
-  border-radius: 0px 5px 5px 0px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transition: 0.3s;
-  z-index: -1;
-  opacity: 0;
-}
-
-.hire-btn:hover::after {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
+  transition: 0.4s;
 }
 
 .hire-btn:hover {
   border: none;
-}
-
-.hire-span {
-  transition: 0.4s;
-}
-
-.hire-btn:hover>.hire-span {
+  /*
+  background: linear-gradient(45deg, #ffee54, #ff00ca);
+  background: linear-gradient(45deg, #1fe6ff, #673ab7);
+  */
+  background-color: #52A3A9!important;
   color: #f8f9fa;
 }
 
@@ -403,7 +361,7 @@ nav button {
 #about .about-img {
   overflow: hidden;
   position: relative;
-  background: #B29584;
+  background: #52A3A9;
   width: 320px;
   height: 430px;
   border-radius: 40%;
@@ -431,7 +389,7 @@ nav button {
 .overlay button {
   border: none;
   outline: none;
-  background: rgba(255, 255, 255, .6);
+  background: #52A3A9AD;
   color: rgba(0, 0, 0, .6);
   padding: 15px;
   font-weight: 450;
@@ -509,12 +467,12 @@ nav button {
   text-align: center;
   margin: 15px 0;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .6);
-  background: #3b5998;
+  color: #f8f9fa;
+  background: #52A3A9;
   font-size: 14px;
   text-decoration: none;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, .2);
-  transition: color .5s;
+  transition: .4s;
   position: relative;
 }
 
@@ -524,10 +482,10 @@ nav button {
 }
 
 a span {
-  background-color: #25d366;
+  background: linear-gradient(45deg, #1fe6ff, #673ab7);
   position: absolute;
   transform: scale(0);
-  transition: all .5s;
+  transition: all .4s;
 }
 
 a span:nth-child(1) {
@@ -586,11 +544,12 @@ a span:nth-child(4) {
   bottom: 2%;
   display: inline-block;
   z-index: 5;
-  background: rgba(255, 255, 255, .5);
+  background: #52A3A9;
+  display: none;
 }
 
 .top-trigger a i {
-  color: #2e2e2e;
+  color: #f8f9fa
 }
 
 /* Skills section */
@@ -685,7 +644,7 @@ a span:nth-child(4) {
   border-radius: 6px;
   z-index: 2;
   transform: scale(0);
-  transition: transform .5s;
+  transition: transform .3s;
 }
 
 .icons .icon-wrapper:nth-child(1) span {
@@ -747,12 +706,12 @@ a span:nth-child(4) {
 .icons .icon-wrapper:hover>span {
   transform: scale(1);
 }
-
+/*
 .icons .icon-wrapper a:hover>i {
   transition: 1s;
   transform: rotate(360deg);
 }
-
+*/
 .sci .icon-wrapper a {
   background-color: #eee;
 }
@@ -1002,19 +961,19 @@ a span:nth-child(4) {
 }
 
 .box-1 {
-  background-image: url("design.jpeg");
+  background-image: url("images/design.jpeg");
 }
 
 .box-2 {
-  background-image: url("development.jpeg");
+  background-image: url("images/development.jpeg");
 }
 
 .box-3 {
-  background-image: url("software.jpeg");
+  background-image: url("images/software.jpeg");
 }
 
 .box-4 {
-  background-image: url("seo.jpeg");
+  background-image: url("images/seo.jpeg");
 }
 
 .box span {
@@ -1085,7 +1044,7 @@ a span:nth-child(4) {
 
 /* Contact section CSS */
 .contact-section {
-  background: url("form-bg.jpeg") no-repeat;
+  background: url("images/form-bg.jpeg") no-repeat;
   background-size: 100% 100%;
   width: 100%;
   min-height: 90vh;
@@ -1096,7 +1055,7 @@ a span:nth-child(4) {
 }
 
 .contact-wrapper {
-  background: url("light.jpeg") no-repeat;
+  background: url("images/light.jpeg") no-repeat;
   background-size: 100% 100%;
   width: 800px;
   max-width: 800px;
@@ -1380,6 +1339,7 @@ footer {
 
   nav {
     position: relative;
+    transition: .5s;
   }
 
   nav ul {
